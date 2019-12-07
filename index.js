@@ -11,6 +11,8 @@ app.use(
         extended: true,
     })
 );
+const port = process.env.PORT || 3030
+
 app.get('*', (req, res) => {
   res.send('This is tutorial App on creating your first USSD app in 5 minutes or less by Ajala Abdulsamii <kgasta@gmail.com>')
 })
@@ -49,8 +51,8 @@ app.post('*', (req, res) => {
   }
 })
 
-app.listen(5000, () => {
-  console.log(`Server running on port 5000`)
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`)
 })
 // const pool = new Pool({
 //     user: 'teamwork',
